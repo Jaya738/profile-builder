@@ -1,0 +1,150 @@
+{
+  "id": "developer",
+  "meta": {
+    "profileName": "Software Developer",
+    "role": "developer",
+    "template": "sidebar",
+    "sectionOrder": [
+      "summary",
+      "experience",
+      "projects",
+      "education",
+      "skills",
+      "certifications"
+    ],
+    "hiddenSections": [],
+    "theme": {
+      "accent": "#2563eb",
+      "fontPairId": "grotesk",
+      "pageSize": "A4"
+    }
+  },
+  "personal": {
+    "fullName": "Alex Rivera",
+    "title": "Senior Software Engineer",
+    "contact": {
+      "email": "alex.rivera@email.com",
+      "phone": "+1 (555) 201-4477",
+      "location": "Austin, TX"
+    },
+    "links": [
+      {
+        "label": "github.com/alexrivera",
+        "url": "https://github.com/alexrivera",
+        "icon": "link"
+      },
+      {
+        "label": "linkedin.com/in/alexrivera",
+        "url": "https://linkedin.com/in/alexrivera",
+        "icon": "link"
+      },
+      {
+        "label": "alexrivera.dev",
+        "url": "https://alexrivera.dev",
+        "icon": "website"
+      }
+    ]
+  },
+  "summary": "Full-stack engineer with 7+ years building high-throughput web applications and APIs. Focused on developer experience, performance, and shipping reliable systems at scale.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Northwind Cloud",
+      "role": "Senior Software Engineer",
+      "location": "Austin, TX",
+      "startDate": "2022-03",
+      "endDate": "",
+      "bullets": [
+        "Led migration of a monolithic billing service to event-driven microservices, cutting p99 latency by 42%.",
+        "Designed a shared component library adopted across 6 product teams, reducing UI build time by 30%.",
+        "Mentored 4 engineers through promotion to mid-level via structured pairing and code review."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "Fernway Labs",
+      "role": "Software Engineer",
+      "location": "Remote",
+      "startDate": "2019-06",
+      "endDate": "2022-02",
+      "bullets": [
+        "Built a real-time analytics dashboard (React, WebSockets) used by 10k+ daily active users.",
+        "Introduced CI/CD pipeline improvements that reduced deploy time from 25 to 6 minutes.",
+        "Owned the public REST API, improving test coverage from 51% to 92%."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "school": "University of Texas at Austin",
+      "degree": "B.S. in Computer Science",
+      "location": "Austin, TX",
+      "startDate": "2015-08",
+      "endDate": "2019-05",
+      "details": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "label": "Languages",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Go"
+      ]
+    },
+    {
+      "id": "skill-2",
+      "label": "Frameworks",
+      "items": [
+        "React",
+        "Node.js",
+        "Next.js",
+        "Express"
+      ]
+    },
+    {
+      "id": "skill-3",
+      "label": "Infrastructure",
+      "items": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Terraform"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Lantern",
+      "description": "Open-source CLI for visualizing bundle size regressions in CI, 1.2k GitHub stars.",
+      "link": "https://github.com/alexrivera/lantern",
+      "tags": [
+        "Rust",
+        "CLI"
+      ]
+    },
+    {
+      "id": "proj-2",
+      "name": "Routewise",
+      "description": "Side project: a route-optimization app for delivery drivers using live traffic data.",
+      "link": "",
+      "tags": [
+        "React Native",
+        "Maps API"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2023"
+    }
+  ]
+}

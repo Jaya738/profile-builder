@@ -1,0 +1,74 @@
+{
+  "id": "other",
+  "meta": {
+    "profileName": "Product Manager",
+    "role": "other",
+    "template": "sidebar",
+    "sectionOrder": ["summary", "experience", "skills", "education", "projects", "certifications"],
+    "hiddenSections": ["certifications"],
+    "theme": { "accent": "#7c3aed", "fontPairId": "editorial", "pageSize": "Letter" }
+  },
+  "personal": {
+    "fullName": "Morgan Bailey",
+    "title": "Product Manager",
+    "contact": { "email": "morgan.bailey@email.com", "phone": "+1 (555) 617-2290", "location": "Chicago, IL" },
+    "links": [
+      { "label": "linkedin.com/in/morganbailey", "url": "https://linkedin.com/in/morganbailey", "icon": "link" },
+      { "label": "morganbailey.co", "url": "https://morganbailey.co", "icon": "website" }
+    ]
+  },
+  "summary": "Product manager with 5 years leading cross-functional teams from discovery to launch. Skilled at translating customer research into roadmaps that balance user needs with business goals.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Bright Path Software",
+      "role": "Senior Product Manager",
+      "location": "Chicago, IL",
+      "startDate": "2022-06",
+      "endDate": "",
+      "bullets": [
+        "Owned the onboarding experience for a B2B SaaS product, lifting activation rate from 48% to 67%.",
+        "Ran quarterly discovery interviews with 30+ customers, shaping a roadmap that grew NPS by 18 points.",
+        "Partnered with engineering and design to ship a self-serve billing flow, cutting support tickets by 25%."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "Fielder Group",
+      "role": "Associate Product Manager",
+      "location": "Chicago, IL",
+      "startDate": "2019-07",
+      "endDate": "2022-05",
+      "bullets": [
+        "Launched a mobile checkout redesign that increased conversion by 12% across iOS and Android.",
+        "Built and maintained the product analytics dashboard used in weekly leadership reviews.",
+        "Coordinated three quarterly release cycles across 4 engineering squads."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "school": "Northwestern University",
+      "degree": "B.A. in Economics",
+      "location": "Evanston, IL",
+      "startDate": "2015-09",
+      "endDate": "2019-06",
+      "details": []
+    }
+  ],
+  "skills": [
+    { "id": "skill-1", "label": "Product", "items": ["Roadmapping", "User Research", "A/B Testing", "Prioritization"] },
+    { "id": "skill-2", "label": "Tools", "items": ["Figma", "Amplitude", "Jira", "SQL"] }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Customer Advisory Board",
+      "description": "Founded a recurring customer feedback program now used across 3 product lines.",
+      "link": "",
+      "tags": []
+    }
+  ],
+  "certifications": []
+}
