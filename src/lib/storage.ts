@@ -33,3 +33,21 @@ export function listDraftIds(): string[] {
     return []
   }
 }
+
+const ACTIVE_PROFILE_KEY = 'profile-builder:active-id'
+
+export function saveActiveProfileId(id: string) {
+  try {
+    localStorage.setItem(ACTIVE_PROFILE_KEY, id)
+  } catch {
+    // storage unavailable — active profile just won't be remembered
+  }
+}
+
+export function loadActiveProfileId(): string | null {
+  try {
+    return localStorage.getItem(ACTIVE_PROFILE_KEY)
+  } catch {
+    return null
+  }
+}

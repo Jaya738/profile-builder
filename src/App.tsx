@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Profile, SectionKey, TemplateId, ThemeConfig } from './types'
 import { BUNDLED_PROFILES, createProfileFromRole, type RoleOption } from './data/profileRegistry'
-import { loadDraft, saveDraft } from './lib/storage'
+import { clearDraft, listDraftIds, loadActiveProfileId, loadDraft, saveActiveProfileId, saveDraft } from './lib/storage'
 import { validateProfile, type ValidationError } from './lib/validate'
 import { exportToPdf, saveProfileToFile, toPlainText } from './lib/export'
 import Toolbar from './components/Toolbar'
@@ -9,22 +9,42 @@ import JsonEditor from './components/JsonEditor'
 import PreviewPane from './components/PreviewPane'
 import NewResumeModal from './components/NewResumeModal'
 
+const BUNDLED_IDS = new Set(BUNDLED_PROFILES.map((p) => p.id))
+
 function loadInitialProfiles(): Profile[] {
-  return BUNDLED_PROFILES.map((bundled) => {
-    const draft = loadDraft(bundled.id)
-    if (!draft) return bundled
+  const bundled = BUNDLED_PROFILES.map((profile) => {
+    const draft = loadDraft(profile.id)
+    if (!draft) return profile
     try {
       return JSON.parse(draft) as Profile
     } catch {
-      return bundled
+      return profile
     }
   })
+
+  const customProfiles = listDraftIds()
+    .filter((id) => !BUNDLED_IDS.has(id))
+    .map((id) => {
+      const draft = loadDraft(id)
+      if (!draft) return null
+      try {
+        return JSON.parse(draft) as Profile
+      } catch {
+        return null
+      }
+    })
+    .filter((p): p is Profile => p !== null)
+
+  return [...bundled, ...customProfiles]
 }
 
 export default function App() {
   const [profiles, setProfiles] = useState<Profile[]>(loadInitialProfiles)
-  const [activeId, setActiveId] = useState(profiles[0].id)
-  const [jsonText, setJsonText] = useState(() => JSON.stringify(profiles[0], null, 2))
+  const [activeId, setActiveId] = useState(() => {
+    const stored = loadActiveProfileId()
+    return stored && profiles.some((p) => p.id === stored) ? stored : profiles[0].id
+  })
+  const [jsonText, setJsonText] = useState(() => JSON.stringify(profiles.find((p) => p.id === activeId) ?? profiles[0], null, 2))
   const [parseError, setParseError] = useState<string | null>(null)
   const [errors, setErrors] = useState<ValidationError[]>([])
   const [showJsonEditor, setShowJsonEditor] = useState(true)
@@ -42,6 +62,7 @@ export default function App() {
     setJsonText(JSON.stringify(activeProfile, null, 2))
     setParseError(null)
     setErrors([])
+    saveActiveProfileId(activeId)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeId])
 
@@ -107,6 +128,27 @@ export default function App() {
     showToast('New resume created')
   }
 
+  function handleRemoveProfile() {
+    const label = activeProfile.meta.profileName
+
+    if (BUNDLED_IDS.has(activeProfile.id)) {
+      const original = BUNDLED_PROFILES.find((p) => p.id === activeProfile.id)
+      if (!original) return
+      if (!window.confirm(`Reset "${label}" back to its default content? Your edits will be lost.`)) return
+      clearDraft(activeProfile.id)
+      setProfiles((prev) => prev.map((p) => (p.id === original.id ? original : p)))
+      showToast('Reset to default')
+      return
+    }
+
+    if (!window.confirm(`Delete "${label}"? This can't be undone.`)) return
+    clearDraft(activeProfile.id)
+    const remaining = profiles.filter((p) => p.id !== activeProfile.id)
+    setProfiles(remaining)
+    setActiveId(remaining[0]?.id ?? BUNDLED_PROFILES[0].id)
+    showToast('Profile deleted')
+  }
+
   function handleExportPdf() {
     exportToPdf(`${activeProfile.personal.fullName} - Resume`)
   }
@@ -133,6 +175,8 @@ export default function App() {
         activeProfileId={activeId}
         onSelectProfile={setActiveId}
         onNewResume={() => setModalOpen(true)}
+        isActiveProfileBundled={BUNDLED_IDS.has(activeProfile.id)}
+        onRemoveProfile={handleRemoveProfile}
         showJsonEditor={showJsonEditor}
         onToggleJsonEditor={() => setShowJsonEditor((v) => !v)}
         saved={saved}

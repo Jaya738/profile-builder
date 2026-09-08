@@ -13,12 +13,21 @@ export default function NewResumeModal({
 }) {
   const [role, setRole] = useState<RoleOption['role']>('developer')
   const [name, setName] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [prevOpen, setPrevOpen] = useState(open)
+
+  if (open !== prevOpen) {
+    setPrevOpen(open)
+    if (open) setSubmitting(false)
+  }
 
   if (!open) return null
 
   const selected = ROLE_OPTIONS.find((r) => r.role === role) ?? ROLE_OPTIONS[0]
 
   function handleCreate() {
+    if (submitting) return
+    setSubmitting(true)
     onCreate(role, name.trim() || selected.seed.meta.profileName)
     setName('')
     onClose()
@@ -67,7 +76,12 @@ export default function NewResumeModal({
           <button type="button" onClick={onClose} className="rounded-md px-3 py-2 text-sm text-slate-600 hover:bg-slate-100">
             Cancel
           </button>
-          <button type="button" onClick={handleCreate} className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+          <button
+            type="button"
+            onClick={handleCreate}
+            disabled={submitting}
+            className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-50"
+          >
             Create resume
           </button>
         </div>

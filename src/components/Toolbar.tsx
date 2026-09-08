@@ -1,4 +1,4 @@
-import { Plus, Printer, Save, ClipboardList, ZoomIn, ZoomOut, PanelLeft, Rows3, Check, Code2 } from 'lucide-react'
+import { Plus, Printer, Save, ClipboardList, ZoomIn, ZoomOut, PanelLeft, Rows3, Check, Code2, Trash2, RotateCcw } from 'lucide-react'
 import type { Profile, TemplateId, ThemeConfig, SectionKey } from '../types'
 import { FONT_PAIRS, PAGE_SIZES } from '../lib/constants'
 import ColorPicker from './ColorPicker'
@@ -18,6 +18,8 @@ export default function Toolbar({
   activeProfileId,
   onSelectProfile,
   onNewResume,
+  isActiveProfileBundled,
+  onRemoveProfile,
   showJsonEditor,
   onToggleJsonEditor,
   saved,
@@ -38,6 +40,8 @@ export default function Toolbar({
   activeProfileId: string
   onSelectProfile: (id: string) => void
   onNewResume: () => void
+  isActiveProfileBundled: boolean
+  onRemoveProfile: () => void
   showJsonEditor: boolean
   onToggleJsonEditor: () => void
   saved: boolean
@@ -76,6 +80,14 @@ export default function Toolbar({
             className="flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1.5 text-sm text-slate-600 hover:bg-slate-50"
           >
             <Plus size={14} /> New
+          </button>
+          <button
+            type="button"
+            onClick={onRemoveProfile}
+            title={isActiveProfileBundled ? 'Reset this profile to its default content' : 'Delete this profile'}
+            className="rounded-md border border-slate-200 p-1.5 text-slate-500 hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+          >
+            {isActiveProfileBundled ? <RotateCcw size={14} /> : <Trash2 size={14} />}
           </button>
           <span className={`flex items-center gap-1 text-[12px] transition-opacity ${saved ? 'opacity-100' : 'opacity-0'} text-emerald-600`}>
             <Check size={13} /> Saved
@@ -118,7 +130,7 @@ export default function Toolbar({
         </div>
       </div>
 
-      <div className="flex items-center gap-0 overflow-x-auto border-t border-slate-100 px-4 py-2">
+      <div className="flex flex-wrap items-center gap-y-2 border-t border-slate-100 px-4 py-2">
         <Group label="Template">
           <div className="flex items-center gap-1">
             <button
