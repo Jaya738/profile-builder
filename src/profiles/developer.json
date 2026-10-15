@@ -1,87 +1,69 @@
 {
   "id": "developer",
   "meta": {
-    "profileName": "Software Developer",
+    "profileName": "Prasanna - Software Developer",
     "role": "developer",
-    "template": "sidebar",
+    "template": "timeline",
     "sectionOrder": [
       "summary",
       "experience",
+      "skills",
       "projects",
       "education",
-      "skills",
       "certifications"
     ],
     "hiddenSections": [],
     "theme": {
-      "accent": "#2563eb",
+      "accent": "#0d9488",
       "fontPairId": "grotesk",
       "pageSize": "A4"
     }
   },
   "personal": {
-    "fullName": "Alex Rivera",
-    "title": "Senior Software Engineer",
+    "fullName": "Reddam Gnana Venkata Prasanna",
+    "title": "Software Engineer",
     "contact": {
-      "email": "alex.rivera@email.com",
-      "phone": "+1 (555) 201-4477",
-      "location": "Austin, TX"
+      "email": "rgvprasanna@email.com",
+      "phone": "+91 8328427599",
+      "location": "Hyderabad, India"
     },
     "links": [
       {
-        "label": "github.com/alexrivera",
-        "url": "https://github.com/alexrivera",
+        "label": "github.com/rgvprasanna",
+        "url": "https://github.com/rgvprasanna",
         "icon": "link"
       },
       {
-        "label": "linkedin.com/in/alexrivera",
-        "url": "https://linkedin.com/in/alexrivera",
+        "label": "linkedin.com/in/prasanna",
+        "url": "https://www.linkedin.com/in/reddam-gnana-venkata-prasanna-726898238/",
         "icon": "link"
-      },
-      {
-        "label": "alexrivera.dev",
-        "url": "https://alexrivera.dev",
-        "icon": "website"
       }
     ]
   },
-  "summary": "Full-stack engineer with 7+ years building high-throughput web applications and APIs. Focused on developer experience, performance, and shipping reliable systems at scale.",
+  "summary": "Developer with 2+ years building Microservices, high-throughput REST APIs. Focused on performance, and shipping reliable systems at scale.",
   "experience": [
     {
       "id": "exp-1",
-      "company": "Northwind Cloud",
-      "role": "Senior Software Engineer",
-      "location": "Austin, TX",
-      "startDate": "2022-03",
-      "endDate": "",
+      "company": "Capgemini Technology Services India Limited",
+      "role": "Software Engineer",
+      "location": "Hyderabad, India",
+      "startDate": "2024-10",
+      "endDate": "2026-10",
       "bullets": [
         "Led migration of a monolithic billing service to event-driven microservices, cutting p99 latency by 42%.",
         "Designed a shared component library adopted across 6 product teams, reducing UI build time by 30%.",
         "Mentored 4 engineers through promotion to mid-level via structured pairing and code review."
-      ]
-    },
-    {
-      "id": "exp-2",
-      "company": "Fernway Labs",
-      "role": "Software Engineer",
-      "location": "Remote",
-      "startDate": "2019-06",
-      "endDate": "2022-02",
-      "bullets": [
-        "Built a real-time analytics dashboard (React, WebSockets) used by 10k+ daily active users.",
-        "Introduced CI/CD pipeline improvements that reduced deploy time from 25 to 6 minutes.",
-        "Owned the public REST API, improving test coverage from 51% to 92%."
       ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "school": "University of Texas at Austin",
-      "degree": "B.S. in Computer Science",
-      "location": "Austin, TX",
-      "startDate": "2015-08",
-      "endDate": "2019-05",
+      "school": "Velagapudi Ramakrishna Siddhartha Engineering College",
+      "degree": "B.Tech, Electronics and Instrumentation Engineering",
+      "location": "Vijayawada, Andhra Pradesh, India",
+      "startDate": "2021-01",
+      "endDate": "2024-05",
       "details": []
     }
   ],
@@ -90,20 +72,15 @@
       "id": "skill-1",
       "label": "Languages",
       "items": [
-        "TypeScript",
-        "JavaScript",
         "Python",
-        "Go"
+        "C"
       ]
     },
     {
       "id": "skill-2",
       "label": "Frameworks",
       "items": [
-        "React",
-        "Node.js",
-        "Next.js",
-        "Express"
+        "Fast API"
       ]
     },
     {
@@ -112,39 +89,28 @@
       "items": [
         "AWS",
         "Docker",
-        "Kubernetes",
-        "Terraform"
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skill-4",
+      "label": "Others",
+      "items": [
+        "git"
       ]
     }
   ],
   "projects": [
     {
       "id": "proj-1",
-      "name": "Lantern",
+      "name": "Revolutionizing object recognition beyond CNN and YOLO with deep learning",
       "description": "Open-source CLI for visualizing bundle size regressions in CI, 1.2k GitHub stars.",
-      "link": "https://github.com/alexrivera/lantern",
+      "link": "https://www.researchgate.net/publication/388251540_Revolutionizing_object_recognition_beyond_CNN_and_YOLO_with_deep_learning_breakthrough",
       "tags": [
-        "Rust",
-        "CLI"
-      ]
-    },
-    {
-      "id": "proj-2",
-      "name": "Routewise",
-      "description": "Side project: a route-optimization app for delivery drivers using live traffic data.",
-      "link": "",
-      "tags": [
-        "React Native",
-        "Maps API"
+        "Python",
+        "LLMs"
       ]
     }
   ],
-  "certifications": [
-    {
-      "id": "cert-1",
-      "name": "AWS Certified Solutions Architect – Associate",
-      "issuer": "Amazon Web Services",
-      "date": "2023"
-    }
-  ]
+  "certifications": []
 }

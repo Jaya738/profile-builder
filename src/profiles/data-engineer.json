@@ -1,77 +1,119 @@
 {
   "id": "data-engineer",
   "meta": {
-    "profileName": "Data Engineer",
+    "profileName": "Prasanna - Data Engineer",
     "role": "dataEngineer",
     "template": "timeline",
-    "sectionOrder": ["summary", "experience", "projects", "skills", "education", "certifications"],
+    "sectionOrder": [
+      "summary",
+      "experience",
+      "projects",
+      "skills",
+      "education",
+      "certifications"
+    ],
     "hiddenSections": [],
-    "theme": { "accent": "#0d9488", "fontPairId": "inter", "pageSize": "A4" }
+    "theme": {
+      "accent": "#0d9488",
+      "fontPairId": "inter",
+      "pageSize": "A4"
+    }
   },
   "personal": {
-    "fullName": "Jordan Lee",
+    "fullName": "Reddam Gnana Venkata Prasanna",
     "title": "Data Engineer",
-    "contact": { "email": "jordan.lee@email.com", "phone": "+1 (555) 330-8821", "location": "Seattle, WA" },
+    "contact": {
+      "email": "rgvprasanna@email.com",
+      "phone": "+91 8328427599",
+      "location": "Hyderabad, India"
+    },
     "links": [
-      { "label": "github.com/jordanlee", "url": "https://github.com/jordanlee", "icon": "link" },
-      { "label": "linkedin.com/in/jordanlee", "url": "https://linkedin.com/in/jordanlee", "icon": "link" }
+      {
+        "label": "github.com/rgvprasanna",
+        "url": "https://github.com/rgvprasanna",
+        "icon": "link"
+      },
+      {
+        "label": "linkedin.com/in/prasanna",
+        "url": "https://www.linkedin.com/in/reddam-gnana-venkata-prasanna-726898238/",
+        "icon": "link"
+      }
     ]
   },
-  "summary": "Data engineer with 6 years building batch and streaming pipelines that power analytics and ML products. Specializes in warehouse modeling, pipeline reliability, and cost optimization.",
+  "summary": "Data engineer with 2+ years building batch and streaming pipelines that power analytics and ML products. Specializes in warehouse modeling, pipeline reliability, and cost optimization.",
   "experience": [
     {
       "id": "exp-1",
-      "company": "Cascade Analytics",
-      "role": "Senior Data Engineer",
-      "location": "Seattle, WA",
-      "startDate": "2023-01",
-      "endDate": "",
+      "company": "Capgemini Technology Services India Limited",
+      "role": "Data Engineer",
+      "location": "Hyderabad, India",
+      "startDate": "2024-10",
+      "endDate": "2026-10",
       "bullets": [
         "Rebuilt the core data warehouse on dbt + Snowflake, cutting nightly transform runtime from 4h to 45m.",
         "Implemented streaming ingestion with Kafka and Flink for real-time fraud-signal features.",
         "Reduced monthly warehouse spend by 35% through partitioning and query optimization."
-      ]
-    },
-    {
-      "id": "exp-2",
-      "company": "Harborlight Data",
-      "role": "Data Engineer",
-      "location": "Seattle, WA",
-      "startDate": "2019-09",
-      "endDate": "2022-12",
-      "bullets": [
-        "Built Airflow-orchestrated ELT pipelines ingesting 200+ data sources into a central lake.",
-        "Partnered with analytics team to design a dimensional model adopted company-wide.",
-        "Wrote data quality test suite (Great Expectations) catching issues before they hit dashboards."
       ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "school": "University of Washington",
-      "degree": "B.S. in Informatics",
-      "location": "Seattle, WA",
-      "startDate": "2015-09",
-      "endDate": "2019-06",
+      "school": "Velagapudi Ramakrishna Siddhartha Engineering College",
+      "degree": "B.Tech, Electronics and Instrumentation Engineering",
+      "location": "Vijayawada, Andhra Pradesh, India",
+      "startDate": "2021-01",
+      "endDate": "2024-05",
       "details": []
     }
   ],
   "skills": [
-    { "id": "skill-1", "label": "Languages", "items": ["Python", "SQL", "Scala"] },
-    { "id": "skill-2", "label": "Pipelines", "items": ["Airflow", "dbt", "Kafka", "Spark", "Flink"] },
-    { "id": "skill-3", "label": "Warehousing", "items": ["Snowflake", "BigQuery", "Redshift"] }
+    {
+      "id": "skill-1",
+      "label": "Languages",
+      "items": [
+        "Python",
+        "SQL",
+        "C"
+      ]
+    },
+    {
+      "id": "skill-2",
+      "label": "Pipelines",
+      "items": [
+        "Airflow",
+        "dbt",
+        "Kafka",
+        "Spark"
+      ]
+    },
+    {
+      "id": "skill-3",
+      "label": "Warehousing",
+      "items": [
+        "Databricks",
+        "BigQuery",
+        "Redshift"
+      ]
+    }
   ],
   "projects": [
     {
       "id": "proj-1",
-      "name": "Open Metrics Pipeline",
-      "description": "Open-source Airflow + dbt starter kit for teams standing up a first data warehouse.",
-      "link": "https://github.com/jordanlee/open-metrics-pipeline",
-      "tags": ["Airflow", "dbt"]
+      "name": "Revolutionizing object recognition beyond CNN and YOLO with deep learning",
+      "description": "This research project focuses on advancing object recognition techniques beyond traditional CNN and YOLO models using deep learning approaches. Its focussed on improving accuracy and efficiency in identifying age of bone from hand X-ray scans accurately based on its bone density.",
+      "link": "https://www.researchgate.net/publication/388251540_Revolutionizing_object_recognition_beyond_CNN_and_YOLO_with_deep_learning_breakthrough",
+      "tags": [
+        "Python",
+        "LLM",
+        "Tensorflow",
+        "OpenCV",
+        "Neural Networks",
+        "Bone Age",
+        "X-ray",
+        "YOLO"
+      ]
     }
   ],
-  "certifications": [
-    { "id": "cert-1", "name": "SnowPro Core Certification", "issuer": "Snowflake", "date": "2024" }
-  ]
+  "certifications": []
 }
