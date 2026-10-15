@@ -1,0 +1,119 @@
+{
+  "id": "data-engineer",
+  "meta": {
+    "profileName": "Prasanna - Data Engineer",
+    "role": "dataEngineer",
+    "template": "timeline",
+    "sectionOrder": [
+      "summary",
+      "experience",
+      "projects",
+      "skills",
+      "education",
+      "certifications"
+    ],
+    "hiddenSections": [],
+    "theme": {
+      "accent": "#0d9488",
+      "fontPairId": "inter",
+      "pageSize": "A4"
+    }
+  },
+  "personal": {
+    "fullName": "Reddam Gnana Venkata Prasanna",
+    "title": "Data Engineer",
+    "contact": {
+      "email": "rgvprasanna@email.com",
+      "phone": "+91 8328427599",
+      "location": "Hyderabad, India"
+    },
+    "links": [
+      {
+        "label": "github.com/rgvprasanna",
+        "url": "https://github.com/rgvprasanna",
+        "icon": "link"
+      },
+      {
+        "label": "linkedin.com/in/prasanna",
+        "url": "https://www.linkedin.com/in/reddam-gnana-venkata-prasanna-726898238/",
+        "icon": "link"
+      }
+    ]
+  },
+  "summary": "Data engineer with 2+ years building batch and streaming pipelines that power analytics and ML products. Specializes in warehouse modeling, pipeline reliability, and cost optimization.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Capgemini Technology Services India Limited",
+      "role": "Data Engineer",
+      "location": "Hyderabad, India",
+      "startDate": "2024-10",
+      "endDate": "2026-10",
+      "bullets": [
+        "Rebuilt the core data warehouse on dbt + Snowflake, cutting nightly transform runtime from 4h to 45m.",
+        "Implemented streaming ingestion with Kafka and Flink for real-time fraud-signal features.",
+        "Reduced monthly warehouse spend by 35% through partitioning and query optimization."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "school": "Velagapudi Ramakrishna Siddhartha Engineering College",
+      "degree": "B.Tech, Electronics and Instrumentation Engineering",
+      "location": "Vijayawada, Andhra Pradesh, India",
+      "startDate": "2021-01",
+      "endDate": "2024-05",
+      "details": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "label": "Languages",
+      "items": [
+        "Python",
+        "SQL",
+        "C"
+      ]
+    },
+    {
+      "id": "skill-2",
+      "label": "Pipelines",
+      "items": [
+        "Airflow",
+        "dbt",
+        "Kafka",
+        "Spark"
+      ]
+    },
+    {
+      "id": "skill-3",
+      "label": "Warehousing",
+      "items": [
+        "Databricks",
+        "BigQuery",
+        "Redshift"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Revolutionizing object recognition beyond CNN and YOLO with deep learning",
+      "description": "This research project focuses on advancing object recognition techniques beyond traditional CNN and YOLO models using deep learning approaches. Its focussed on improving accuracy and efficiency in identifying age of bone from hand X-ray scans accurately based on its bone density.",
+      "link": "https://www.researchgate.net/publication/388251540_Revolutionizing_object_recognition_beyond_CNN_and_YOLO_with_deep_learning_breakthrough",
+      "tags": [
+        "Python",
+        "LLM",
+        "Tensorflow",
+        "OpenCV",
+        "Neural Networks",
+        "Bone Age",
+        "X-ray",
+        "YOLO"
+      ]
+    }
+  ],
+  "certifications": []
+}

@@ -1,0 +1,116 @@
+{
+  "id": "developer",
+  "meta": {
+    "profileName": "Prasanna - Software Developer",
+    "role": "developer",
+    "template": "timeline",
+    "sectionOrder": [
+      "summary",
+      "experience",
+      "skills",
+      "projects",
+      "education",
+      "certifications"
+    ],
+    "hiddenSections": [],
+    "theme": {
+      "accent": "#0d9488",
+      "fontPairId": "grotesk",
+      "pageSize": "A4"
+    }
+  },
+  "personal": {
+    "fullName": "Reddam Gnana Venkata Prasanna",
+    "title": "Software Engineer",
+    "contact": {
+      "email": "rgvprasanna@email.com",
+      "phone": "+91 8328427599",
+      "location": "Hyderabad, India"
+    },
+    "links": [
+      {
+        "label": "github.com/rgvprasanna",
+        "url": "https://github.com/rgvprasanna",
+        "icon": "link"
+      },
+      {
+        "label": "linkedin.com/in/prasanna",
+        "url": "https://www.linkedin.com/in/reddam-gnana-venkata-prasanna-726898238/",
+        "icon": "link"
+      }
+    ]
+  },
+  "summary": "Developer with 2+ years building Microservices, high-throughput REST APIs. Focused on performance, and shipping reliable systems at scale.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Capgemini Technology Services India Limited",
+      "role": "Software Engineer",
+      "location": "Hyderabad, India",
+      "startDate": "2024-10",
+      "endDate": "2026-10",
+      "bullets": [
+        "Led migration of a monolithic billing service to event-driven microservices, cutting p99 latency by 42%.",
+        "Designed a shared component library adopted across 6 product teams, reducing UI build time by 30%.",
+        "Mentored 4 engineers through promotion to mid-level via structured pairing and code review."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "school": "Velagapudi Ramakrishna Siddhartha Engineering College",
+      "degree": "B.Tech, Electronics and Instrumentation Engineering",
+      "location": "Vijayawada, Andhra Pradesh, India",
+      "startDate": "2021-01",
+      "endDate": "2024-05",
+      "details": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "label": "Languages",
+      "items": [
+        "Python",
+        "C"
+      ]
+    },
+    {
+      "id": "skill-2",
+      "label": "Frameworks",
+      "items": [
+        "Fast API"
+      ]
+    },
+    {
+      "id": "skill-3",
+      "label": "Infrastructure",
+      "items": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "skill-4",
+      "label": "Others",
+      "items": [
+        "git"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "Revolutionizing object recognition beyond CNN and YOLO with deep learning",
+      "description": "Open-source CLI for visualizing bundle size regressions in CI, 1.2k GitHub stars.",
+      "link": "https://www.researchgate.net/publication/388251540_Revolutionizing_object_recognition_beyond_CNN_and_YOLO_with_deep_learning_breakthrough",
+      "tags": [
+        "Python",
+        "LLMs"
+      ]
+    }
+  ],
+  "certifications": []
+}
